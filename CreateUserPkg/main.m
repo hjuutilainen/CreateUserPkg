@@ -10,5 +10,20 @@
 
 int main(int argc, char *argv[])
 {
+    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	
+	// Create the default values
+    NSDictionary *userDefaultsValuesDict;
+	userDefaultsValuesDict = [NSDictionary dictionaryWithObjectsAndKeys:
+                              @"com.mycompany",             @"DefaultOrganizationID",
+                              [NSNumber numberWithInt:499], @"DefaultUserID",
+                              @"Administrator",             @"DefaultAccountType",
+                              nil];
+	
+	// Register the defaults
+	[[NSUserDefaults standardUserDefaults] registerDefaults:userDefaultsValuesDict];
+	
+    [pool release];
+    
     return NSApplicationMain(argc, (const char **)argv);
 }

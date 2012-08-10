@@ -24,6 +24,8 @@
 		6605E696159B964D0048362A /* CUPUserNameFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6605E692159B964D0048362A /* CUPUserNameFormatter.m */; };
 		6605E697159B964D0048362A /* CUPUUIDFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6605E694159B964D0048362A /* CUPUUIDFormatter.m */; };
 		66B221D8159C4C30003FDF4E /* CreateUserPkg.icns in Resources */ = {isa = PBXBuildFile; fileRef = 66B221D7159C4C30003FDF4E /* CreateUserPkg.icns */; };
+		F5F16DD215D4FB470079615A /* CUPPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F16DD015D4FB470079615A /* CUPPreferences.m */; };
+		F5F16DD515D4FB640079615A /* CUPPreferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5F16DD715D4FB640079615A /* CUPPreferences.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,9 @@
 		6605E693159B964D0048362A /* CUPUUIDFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUPUUIDFormatter.h; sourceTree = "<group>"; };
 		6605E694159B964D0048362A /* CUPUUIDFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUPUUIDFormatter.m; sourceTree = "<group>"; };
 		66B221D7159C4C30003FDF4E /* CreateUserPkg.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = CreateUserPkg.icns; sourceTree = "<group>"; };
+		F5F16DCF15D4FB470079615A /* CUPPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUPPreferences.h; sourceTree = "<group>"; };
+		F5F16DD015D4FB470079615A /* CUPPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUPPreferences.m; sourceTree = "<group>"; };
+		F5F16DD615D4FB640079615A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CUPPreferences.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +118,9 @@
 			isa = PBXGroup;
 			children = (
 				0596D19C159AF2A200B898B4 /* CreateUserPkg.entitlements */,
+				F5F16DCF15D4FB470079615A /* CUPPreferences.h */,
+				F5F16DD015D4FB470079615A /* CUPPreferences.m */,
+				F5F16DD715D4FB640079615A /* CUPPreferences.xib */,
 				6605E68C159B90070048362A /* CUPAppDelegate.h */,
 				6605E68D159B90070048362A /* CUPAppDelegate.m */,
 				6605E688159B86480048362A /* CUPBestHostFinder.h */,
@@ -211,6 +219,7 @@
 				05524F94159B33AB00741F47 /* read_package.py in Resources */,
 				66B221D8159C4C30003FDF4E /* CreateUserPkg.icns in Resources */,
 				05CF2A1A159DEDE4004F36C8 /* dropimagehere.png in Resources */,
+				F5F16DD515D4FB640079615A /* CUPPreferences.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +269,7 @@
 				6605E696159B964D0048362A /* CUPUserNameFormatter.m in Sources */,
 				6605E697159B964D0048362A /* CUPUUIDFormatter.m in Sources */,
 				05CF2A17159DE745004F36C8 /* CUPImageSelector.m in Sources */,
+				F5F16DD215D4FB470079615A /* CUPPreferences.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +306,14 @@
 				0596D195159AF27800B898B4 /* en */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		F5F16DD715D4FB640079615A /* CUPPreferences.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5F16DD615D4FB640079615A /* en */,
+			);
+			name = CUPPreferences.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -350,13 +368,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = CreateUserPkg/CreateUserPkg.entitlements;
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: University of Gothenburg";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CreateUserPkg/CreateUserPkg-Prefix.pch";
 				INFOPLIST_FILE = "CreateUserPkg/CreateUserPkg-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "56574830-E13E-4657-BCFA-3B7971A19A3A";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -365,13 +383,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = CreateUserPkg/CreateUserPkg.entitlements;
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: University of Gothenburg";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CreateUserPkg/CreateUserPkg-Prefix.pch";
 				INFOPLIST_FILE = "CreateUserPkg/CreateUserPkg-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "56574830-E13E-4657-BCFA-3B7971A19A3A";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

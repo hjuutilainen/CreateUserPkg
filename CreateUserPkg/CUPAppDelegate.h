@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class CUPPreferences;
+
 @interface CUPAppDelegate : NSObject <NSApplicationDelegate>
+{
+    CUPPreferences *preferencesController;
+}
+
+- (IBAction)openPreferencesAction:(id)sender;
 
 @end
